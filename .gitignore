@@ -23,3 +23,6 @@ tsconfig.tsbuildinfo
 *.sln
 *.sw?
 .env
+
+.vercel
+.env*
