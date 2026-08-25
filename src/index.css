@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --background: 220 39% 7%;
+    --foreground: 210 40% 98%;
+    --card: 218 39% 9%;
+    --primary: 187 100% 50%;
+    --border: 215 21% 21%;
+    --radius: 0.25rem;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: #2A3441;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: #0A0F18;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+    background: #0A0F18;
+    color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: #00E5FF;
+    color: #0A0F18;
+  }
+
+  :focus-visible {
+    outline: 2px solid #00E5FF;
+    outline-offset: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0F18;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2A3441;
+    border: 2px solid #0A0F18;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+  }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-[1440px] px-6 lg:px-10; }
+  .content-x { @apply mx-auto w-full max-w-[1440px]; }
+  .section-pad { @apply py-24 md:py-28 lg:py-36; }
+  .heading-1 { @apply font-display text-[3.3rem] font-black leading-[0.98] md:text-[6rem] lg:text-[7.35rem]; }
+  .heading-2 { @apply font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl; }
+  .heading-3 { @apply font-display text-2xl font-bold leading-tight md:text-3xl; }
+  .heading-4 { @apply font-display text-lg font-bold leading-snug; }
+  .eyebrow { @apply inline-flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.3em] text-steel-500; }
+  .chapter { @apply inline-flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.3em] text-steel-500; }
+  .body-lg { @apply max-w-[75ch] text-lg leading-[1.7] text-steel-300; }
+  .body-base { @apply text-[15px] leading-7 text-steel-400; }
+  .btn-primary { @apply inline-flex min-h-[52px] items-center justify-center gap-3 bg-accent px-8 font-body text-base font-semibold text-ink transition duration-150 ease-out hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-secondary { @apply inline-flex min-h-[52px] items-center justify-center gap-3 border border-line bg-transparent px-8 font-body text-base font-semibold text-steel-100 transition duration-150 ease-out hover:border-accent hover:text-accent; }
+  .btn-ghost { @apply inline-flex items-center gap-2 text-sm font-medium text-steel-300 transition-colors duration-200 hover:text-white; }
+  .card { @apply border border-line bg-panel; }
+  .glass-card { @apply border border-line bg-panel; }
+  .glass-card-hover,
+  .card-hover { @apply border border-line bg-panel transition duration-200 ease-out hover:border-accent; }
+  .tag { @apply inline-flex items-center gap-2 border border-line px-4 py-2 font-mono text-[11px] uppercase tracking-[0.28em]; }
+  .tag-current { @apply border-accent text-accent; }
+  .tag-future { @apply border-line text-steel-400; }
+  .icon-box,
+  .icon-box-sm { @apply flex items-center justify-center border border-accent/30 bg-accent/[0.05] text-accent; }
+  .icon-box-amber { @apply flex items-center justify-center border border-white/[0.09] bg-white/[0.025] text-steel-400; }
+  .input-field,
+  .select-field { @apply w-full border border-line bg-ink px-4 py-3.5 text-sm text-white placeholder:text-steel-600 transition duration-200 focus:border-accent focus:outline-none; }
+  .select-field { @apply appearance-none; }
+  .section-top-line { @apply absolute inset-x-0 top-0 h-px bg-line; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, .06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, .06) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .grid-bg-fine {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, .05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, .05) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+  .technical-rule {
+    background: linear-gradient(90deg, #00E5FF 0 48px, #2A3441 48px 100%);
+    height: 1px;
+  }
+  .text-gradient-cyan,
+  .text-gradient-white {
+    color: inherit;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
