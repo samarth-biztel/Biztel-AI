@@ -62,8 +62,10 @@ function StationVisual() {
 export function Hero({ onNavigate }: HeroProps) {
   return (
     <section className="relative min-h-screen overflow-hidden border-b border-line bg-ink pt-[92px]">
-      <div className="absolute inset-0 bg-ink" />
-      <div className="absolute inset-0 grid-bg opacity-80" />
+      <div className="absolute inset-0 hero-industrial-bg" />
+      <div className="absolute inset-0 grid-bg opacity-70" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,15,24,.98)_0%,rgba(10,15,24,.82)_42%,rgba(10,15,24,.70)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,15,24,.54)_0%,rgba(10,15,24,.15)_44%,rgba(10,15,24,.78)_100%)]" />
 
       <div className="container-x relative flex min-h-[calc(100vh-92px)] flex-col justify-center pb-32 pt-16">
         <motion.div

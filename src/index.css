@@ -128,6 +128,17 @@
       linear-gradient(90deg, rgba(148, 163, 184, .05) 1px, transparent 1px);
     background-size: 36px 36px;
   }
+  .hero-industrial-bg {
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, .025), transparent 12% 88%, rgba(255, 255, 255, .03)),
+      linear-gradient(90deg, transparent 0 36%, rgba(160, 180, 200, .10) 43%, transparent 49%),
+      linear-gradient(90deg, transparent 0 58%, rgba(160, 180, 200, .12) 64%, transparent 70%),
+      linear-gradient(90deg, transparent 0 76%, rgba(160, 180, 200, .13) 82%, transparent 88%),
+      radial-gradient(circle at 48% 38%, rgba(95, 112, 132, .26), transparent 34%),
+      radial-gradient(circle at 88% 54%, rgba(110, 128, 148, .24), transparent 28%),
+      linear-gradient(180deg, #111923 0%, #0a1019 48%, #07101b 100%);
+    filter: saturate(.8);
+  }
   .technical-rule {
     background: linear-gradient(90deg, #00E5FF 0 48px, #2A3441 48px 100%);
     height: 1px;
