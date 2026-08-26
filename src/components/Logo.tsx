@@ -10,7 +10,7 @@ export function Logo({ className = '', variant = 'full' }: LogoProps) {
         <span className="absolute -bottom-1 -right-1 h-3 w-3 bg-accent" />
       </span>
       {variant === 'full' && (
-        <span className="font-display text-[22px] font-black uppercase leading-none tracking-[-0.03em] text-white">
+        <span className="font-display text-[22px] font-black uppercase leading-none tracking-normal text-white">
           BIZTEL<span className="text-accent">AI</span>
         </span>
       )}

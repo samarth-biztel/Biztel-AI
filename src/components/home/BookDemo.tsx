@@ -9,19 +9,19 @@ const interests = [
   'AI for Manufacturing Functions',
 ];
 
-export function BookDemo() {
+export function BookDemo({ compact = false }: { compact?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <section id="book-demo" className="border-b border-line bg-panel text-white">
-      <div className="container-x grid gap-16 py-28 lg:grid-cols-12 lg:py-36">
+      <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:py-28">
         <Reveal className="lg:col-span-5">
-          <Chapter n="10" label="Book a Demo" />
+          <Chapter n={compact ? '05' : '09'} label="Book a Demo" />
           <h2 className="mt-10 font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
-            See what AI can do in your manufacturing workflow
+            Have a manufacturing workflow you want to improve?
           </h2>
           <p className="mt-8 text-xl leading-8 text-steel-300">
-            Tell us about one manufacturing workflow or problem you want to improve. This prototype keeps the request in the frontend only.
+            Tell us about the station, process or quality workflow you want to monitor, validate or improve.
           </p>
         </Reveal>
 
@@ -31,7 +31,7 @@ export function BookDemo() {
               <CheckCircle2 className="h-10 w-10 text-accent" strokeWidth={1.6} />
               <h3 className="mt-8 font-display text-3xl font-extrabold">Request captured</h3>
               <p className="mt-4 text-lg leading-8 text-steel-300">
-                The frontend confirmation state is working. No backend request was sent.
+                Thanks. The BiztelAI team will use these details to prepare the next conversation.
               </p>
               <button onClick={() => setSubmitted(false)} className="btn-secondary mt-10">
                 Submit another request

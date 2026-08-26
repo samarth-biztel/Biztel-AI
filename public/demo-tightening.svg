@@ -17,6 +17,6 @@
   <path d="M240 130H300" stroke="#62b987" stroke-width="1.5" marker-end="url(#arrow)"/><path d="M340 130H400" stroke="#21c7d8" stroke-width="1.5" marker-end="url(#arrow2)"/>
   <rect x="120" y="310" width="400" height="40" fill="#040b14"/>
   <circle cx="140" cy="330" r="4" fill="#62b987"/>
-  <text x="152" y="334" font-family="Inter, sans-serif" font-size="11" fill="#a9b4c4">LIVE — Tightening Sequence Validation</text>
+  <text x="152" y="334" font-family="Inter, sans-serif" font-size="11" fill="#a9b4c4">LIVE - Tightening Sequence Validation</text>
   <text x="460" y="334" font-family="Inter, sans-serif" font-size="11" fill="#69dbe6">2/5 OK</text>
 </svg>

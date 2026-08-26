@@ -8,25 +8,25 @@ const columns = [
   {
     title: 'Product',
     links: [
-      ['AI Supervisor', '/#ai-supervisor'],
-      ['Process Monitoring', '/#ai-supervisor'],
-      ['Visual Inspection', '/#ai-supervisor'],
+      ['AI Supervisor', '/products/ai-supervisor'],
+      ['Process Monitoring', '/products/ai-supervisor#process-monitoring'],
+      ['Visual Inspection', '/products/ai-supervisor#visual-inspection'],
     ],
   },
   {
-    title: 'Platform',
+    title: 'Roadmap',
     links: [
-      ['AI Decision Layer', '/#ai-decision-layer'],
-      ['AI Engineer Assistants', '/#future-vision'],
-      ['Production Proof', '/#production-proof'],
+      ['AI Teammates', '/ai-teammates'],
+      ['Production', '/ai-teammates'],
+      ['Quality', '/ai-teammates'],
     ],
   },
   {
     title: 'Company',
     links: [
-      ['Industries', '/#industries'],
-      ['Why BiztelAI', '/#why-biztel'],
-      ['Book a Demo', '/#book-demo'],
+      ['About', '/about'],
+      ['Contact', '/contact'],
+      ['Book a Demo', '/contact#book-demo'],
     ],
   },
 ];

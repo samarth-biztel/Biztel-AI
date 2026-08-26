@@ -3,16 +3,10 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/home/Hero';
-import { Marquee } from '@/components/home/Marquee';
-import { ManufacturingProblem } from '@/components/home/ManufacturingProblem';
-import { DecisionLayer } from '@/components/home/DecisionLayer';
+import { WhatWeDo } from '@/components/home/WhatWeDo';
 import { AISupervisor } from '@/components/home/AISupervisor';
-import { HowItWorks } from '@/components/home/HowItWorks';
-import { DemoVideos } from '@/components/home/DemoVideos';
 import { ProductionProof } from '@/components/home/ProductionProof';
 import { FutureVision } from '@/components/home/FutureVision';
-import { IndustriesFunctions } from '@/components/home/IndustriesFunctions';
-import { WhyBiztelAI } from '@/components/home/WhyBiztelAI';
 import { BookDemo } from '@/components/home/BookDemo';
 import { useSiteNavigation } from '@/hooks/useSiteNavigation';
 
@@ -23,17 +17,11 @@ export default function HomePage() {
       <Header onNavigate={navigate} currentPath="/" />
       <main>
         <Hero onNavigate={navigate} />
-        <Marquee />
-        <ManufacturingProblem />
-        <DecisionLayer />
-        <AISupervisor />
-        <HowItWorks />
-        <DemoVideos />
+        <WhatWeDo onNavigate={navigate} />
+        <AISupervisor onNavigate={navigate} />
         <ProductionProof />
         <FutureVision onNavigate={navigate} />
-        <IndustriesFunctions />
-        <WhyBiztelAI />
-        <BookDemo />
+        <BookDemo compact />
       </main>
       <Footer onNavigate={navigate} />
     </div>

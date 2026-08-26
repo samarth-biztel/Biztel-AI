@@ -1,4 +1,3 @@
-import { Play } from 'lucide-react';
 import { Reveal, Chapter } from '@/components/ui/Reveal';
 
 const demos = [
@@ -6,7 +5,8 @@ const demos = [
     number: '01',
     title: 'Cleaning Process',
     caption: 'AI-powered monitoring of a manual manufacturing process.',
-    poster: 'https://www.silberhorn-gruppe.de/fileadmin/_processed_/0/0/csm_Roboterzellen_1bc4539985.png',
+    poster: '/demo-cleaning.svg',
+    src: '/videos/cleaning-process.mp4',
     monitored: 'Operator actions and surface preparation steps',
     understands: 'Step sequence, missed or incorrect actions',
     output: 'SOP validation, operator alerts, cycle record',
@@ -15,7 +15,8 @@ const demos = [
     number: '02',
     title: 'Tightening Process',
     caption: 'AI-powered validation of a manufacturing workflow.',
-    poster: 'https://evort.ru/wp-content/uploads/2024/03/primenenie-promyshlennyh-robotov.jpg',
+    poster: '/demo-tightening.svg',
+    src: '/videos/tightening-process.mp4',
     monitored: 'Bolt tightening sequence and tool events',
     understands: 'Sequence order, completion, deviations',
     output: 'OK / NOK validation, PLC interlock, traceability',
@@ -28,7 +29,7 @@ export function DemoVideos() {
       <div className="container-x py-28 lg:py-36">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           <Reveal className="lg:col-span-7">
-            <Chapter n="05" label="Demonstration" />
+            <Chapter n="07" label="Demo Videos" />
             <h2 className="mt-10 max-w-4xl font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
               See AI Supervisor in action
             </h2>
@@ -45,13 +46,19 @@ export function DemoVideos() {
             <Reveal key={demo.title} delay={index * 0.1} className="h-full">
               <article className="h-full overflow-hidden border border-line bg-panel">
                 <div className="relative aspect-[16/9] overflow-hidden">
-                  <img src={demo.poster} alt={`${demo.title} industrial demonstration`} className="h-full w-full object-cover" loading="lazy" />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,15,24,.08)_0%,rgba(10,15,24,.38)_45%,rgba(10,15,24,.88)_100%)]" />
-                  <span className="absolute left-6 top-6 font-mono text-[11px] uppercase tracking-[0.34em] text-accent">Demo {demo.number}</span>
-                  <span className="absolute bottom-8 right-8 font-mono text-[11px] uppercase tracking-[0.34em] text-steel-300">Video Coming Soon</span>
-                  <button className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-accent bg-ink/55 text-accent backdrop-blur-sm" aria-label={`Play ${demo.title} demo`}>
-                    <Play className="ml-1 h-7 w-7" strokeWidth={1.6} />
-                  </button>
+                  <video
+                    className="h-full w-full bg-navy-950 object-cover"
+                    controls
+                    muted
+                    preload="metadata"
+                    poster={demo.poster}
+                    aria-label={`${demo.title} demo video`}
+                  >
+                    <source src={demo.src} type="video/mp4" />
+                  </video>
+                  <span className="pointer-events-none absolute left-6 top-6 bg-ink/85 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.34em] text-accent">
+                    Demo {demo.number}
+                  </span>
                 </div>
 
                 <div className="p-8 lg:p-10">
