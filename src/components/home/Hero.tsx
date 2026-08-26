@@ -19,7 +19,7 @@ const visualRows = [
 
 function StationVisual() {
   return (
-    <div className="mt-14 max-w-5xl border border-line bg-panel/95 p-4 shadow-2xl shadow-black/25 lg:mt-16">
+    <div className="mx-auto mt-14 w-full max-w-6xl border border-line bg-panel/90 p-4 shadow-2xl shadow-black/25 lg:mt-16">
       <div className="flex items-center justify-between border-b border-line px-3 pb-4">
         <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.24em] text-steel-400">
           <span className="h-2 w-2 bg-green-400" />
@@ -67,11 +67,11 @@ export function Hero({ onNavigate }: HeroProps) {
         src="https://www.silberhorn-gruppe.de/fileadmin/_processed_/0/0/csm_Roboterzellen_1bc4539985.png"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover opacity-34 mix-blend-screen"
+        className="absolute inset-0 h-full w-full object-cover opacity-[0.58]"
       />
       <div className="absolute inset-0 grid-bg opacity-70" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,15,24,.96)_0%,rgba(10,15,24,.76)_44%,rgba(10,15,24,.58)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,15,24,.50)_0%,rgba(10,15,24,.08)_45%,rgba(10,15,24,.74)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,15,24,.88)_0%,rgba(10,15,24,.58)_44%,rgba(10,15,24,.38)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,15,24,.38)_0%,rgba(10,15,24,.02)_45%,rgba(10,15,24,.62)_100%)]" />
 
       <div className="container-x relative flex min-h-[calc(100vh-92px)] flex-col justify-center pb-32 pt-16">
         <motion.div
