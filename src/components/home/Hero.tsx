@@ -1,9 +1,5 @@
-import { ArrowUpRight, CheckCircle2, Eye, Gauge, Workflow } from 'lucide-react';
+import { CheckCircle2, Eye, Gauge, Workflow } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-interface HeroProps {
-  onNavigate: (path: string) => void;
-}
 
 const stats = [
   ['Current', 'AI Supervisor'],
@@ -59,7 +55,7 @@ function StationVisual() {
   );
 }
 
-export function Hero({ onNavigate }: HeroProps) {
+export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden border-b border-line bg-ink pt-[92px]">
       <div className="absolute inset-0 hero-industrial-bg" />
@@ -92,16 +88,9 @@ export function Hero({ onNavigate }: HeroProps) {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:items-center">
-            <p className="max-w-[680px] text-xl leading-8 text-steel-300 lg:col-span-7">
-              Turn factory data and operational reality into intelligence for the people who run the plant.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row lg:col-span-5 lg:justify-end">
-              <button onClick={() => onNavigate('/contact#book-demo')} className="btn-primary">
-                Book a Demo <ArrowUpRight className="h-4 w-4" />
-              </button>
-            </div>
-          </div>
+          <p className="mt-12 max-w-[760px] text-xl leading-8 text-steel-300">
+            Turn factory data and operational reality into intelligence for the people who run the plant.
+          </p>
           <StationVisual />
         </motion.div>
       </div>

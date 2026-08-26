@@ -16,7 +16,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-navy-950">
       <Header onNavigate={navigate} currentPath="/" />
       <main>
-        <Hero onNavigate={navigate} />
+        <Hero />
         <WhatWeDo onNavigate={navigate} />
         <AISupervisor onNavigate={navigate} />
         <ProductionProof />
