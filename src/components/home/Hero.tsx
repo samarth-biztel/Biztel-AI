@@ -63,9 +63,15 @@ export function Hero({ onNavigate }: HeroProps) {
   return (
     <section className="relative min-h-screen overflow-hidden border-b border-line bg-ink pt-[92px]">
       <div className="absolute inset-0 hero-industrial-bg" />
+      <img
+        src="https://www.silberhorn-gruppe.de/fileadmin/_processed_/0/0/csm_Roboterzellen_1bc4539985.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover opacity-34 mix-blend-screen"
+      />
       <div className="absolute inset-0 grid-bg opacity-70" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,15,24,.98)_0%,rgba(10,15,24,.82)_42%,rgba(10,15,24,.70)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,15,24,.54)_0%,rgba(10,15,24,.15)_44%,rgba(10,15,24,.78)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,15,24,.96)_0%,rgba(10,15,24,.76)_44%,rgba(10,15,24,.58)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,15,24,.50)_0%,rgba(10,15,24,.08)_45%,rgba(10,15,24,.74)_100%)]" />
 
       <div className="container-x relative flex min-h-[calc(100vh-92px)] flex-col justify-center pb-32 pt-16">
         <motion.div
