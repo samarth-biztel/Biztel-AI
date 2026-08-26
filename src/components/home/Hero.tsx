@@ -78,7 +78,7 @@ export function Hero({ onNavigate }: HeroProps) {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-[1180px]"
+          className="w-full"
         >
           <div className="eyebrow mb-10">
             <span className="h-2 w-2 bg-accent" />
