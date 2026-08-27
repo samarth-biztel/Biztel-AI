@@ -9,8 +9,26 @@ const interests = [
   'AI for Manufacturing Functions',
 ];
 
-export function BookDemo({ compact = false }: { compact?: boolean }) {
+export function BookDemo({ compact = false, onNavigate }: { compact?: boolean; onNavigate?: (path: string) => void }) {
   const [submitted, setSubmitted] = useState(false);
+
+  if (compact) {
+    return (
+      <section id="book-demo" className="border-b border-line bg-panel text-white">
+        <div className="container-x py-24 text-center lg:py-28">
+          <Reveal>
+            <Chapter n="05" label="Book a Demo" />
+            <h2 className="mx-auto mt-10 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+              Have a manufacturing workflow you want to improve?
+            </h2>
+            <button onClick={() => onNavigate?.('/contact#book-demo')} className="btn-primary mt-10">
+              Book a Demo <ArrowUpRight className="h-4 w-4" />
+            </button>
+          </Reveal>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="book-demo" className="border-b border-line bg-panel text-white">

@@ -1,3 +1,4 @@
+import { ArrowDownToLine, FileText } from 'lucide-react';
 import { Reveal, Chapter } from '@/components/ui/Reveal';
 
 const demos = [
@@ -6,7 +7,8 @@ const demos = [
     title: 'Cleaning Process',
     caption: 'AI-powered monitoring of a manual manufacturing process.',
     poster: '/demo-cleaning.svg',
-    src: '/videos/cleaning-process.mp4',
+    src: '/videos/cleaning_process.mp4',
+    pdf: '/cleaning_process.pdf',
     monitored: 'Operator actions and surface preparation steps',
     understands: 'Step sequence, missed or incorrect actions',
     output: 'SOP validation, operator alerts, cycle record',
@@ -16,7 +18,8 @@ const demos = [
     title: 'Tightening Process',
     caption: 'AI-powered validation of a manufacturing workflow.',
     poster: '/demo-tightening.svg',
-    src: '/videos/tightening-process.mp4',
+    src: '/videos/tightening_process.mp4',
+    pdf: '/tightening_process.pdf',
     monitored: 'Bolt tightening sequence and tool events',
     understands: 'Sequence order, completion, deviations',
     output: 'OK / NOK validation, PLC interlock, traceability',
@@ -76,6 +79,11 @@ export function DemoVideos() {
                       </div>
                     ))}
                   </div>
+                  <a href={demo.pdf} target="_blank" rel="noreferrer" className="btn-secondary mt-8 w-full">
+                    <FileText className="h-4 w-4" />
+                    View Process PDF
+                    <ArrowDownToLine className="h-4 w-4" />
+                  </a>
                 </div>
               </article>
             </Reveal>
