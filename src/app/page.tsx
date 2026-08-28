@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/home/Hero';
 import { WhatWeDo } from '@/components/home/WhatWeDo';
 import { AISupervisor } from '@/components/home/AISupervisor';
+import { ProductionProof } from '@/components/home/ProductionProof';
 import { FutureVision } from '@/components/home/FutureVision';
 import { BookDemo } from '@/components/home/BookDemo';
 import { useSiteNavigation } from '@/hooks/useSiteNavigation';
@@ -18,6 +19,7 @@ export default function HomePage() {
         <Hero onNavigate={navigate} />
         <WhatWeDo />
         <AISupervisor onNavigate={navigate} />
+        <ProductionProof />
         <FutureVision onNavigate={navigate} />
         <BookDemo compact onNavigate={navigate} />
       </main>

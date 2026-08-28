@@ -17,11 +17,38 @@ const detailPoints = [
 ];
 
 export function ProductionProof({ detailed = false }: { detailed?: boolean }) {
+  if (!detailed) {
+    return (
+      <section id="production-proof" className="border-b border-line bg-panel text-white">
+        <div className="container-x py-20 lg:py-24">
+          <Reveal>
+            <Chapter n="03" label="Production Proof" />
+            <div className="mt-10 grid gap-y-7 border-y border-line py-8 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                '50,000+ cycles',
+                'Production deployment',
+                'Global Automotive OEM',
+                'Edge AI + PLC',
+              ].map((point, index) => (
+                <p
+                  key={point}
+                  className={`text-2xl font-semibold text-white ${index > 0 ? 'lg:border-l lg:border-line lg:pl-8' : ''}`}
+                >
+                  {point}
+                </p>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="production-proof" className="border-b border-line bg-panel text-white">
       <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:py-28">
         <Reveal className="lg:col-span-6">
-          <Chapter n={detailed ? '08' : '03'} label="Production Proof" />
+          <Chapter n="08" label="Production Proof" />
           <h2 className="mt-10 max-w-xl font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
             Already running
             <span className="block">in production.</span>
@@ -45,7 +72,7 @@ export function ProductionProof({ detailed = false }: { detailed?: boolean }) {
             Customer - Global Automotive OEM
           </p>
           <div className="mt-10 divide-y divide-line border-y border-line">
-            {(detailed ? [...proofPoints, ...detailPoints] : proofPoints).map((point, index) => (
+            {[...proofPoints, ...detailPoints].map((point, index) => (
               <div key={point} className="flex items-center justify-between py-6">
                 <span className="text-xl text-white">{point}</span>
                 <span className="font-mono text-xs text-steel-600">{String(index + 1).padStart(2, '0')}</span>
