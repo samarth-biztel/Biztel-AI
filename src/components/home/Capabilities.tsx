@@ -2,14 +2,20 @@ import { Activity, Check, Eye } from 'lucide-react';
 import { Reveal, Chapter } from '@/components/ui/Reveal';
 
 const process = [
-  'Monitor operator actions in real time', 'Validate SOP execution', 'Detect missed or incorrect steps',
-  'Monitor process sequence', 'Detect workflow deviations', 'Alert operators',
-  'Trigger PLC-linked actions/interlocks', 'Record cycle-level traceability', 'Create operational logs and metrics',
+  'Action recognition',
+  'Step order matching',
+  'Cycle boundary detection',
+  'Deviation classification',
+  'Process timing signals',
+  'Station rule mapping',
 ];
 const inspection = [
-  'Defect detection', 'Presence / absence verification', 'Assembly verification',
-  'Position / orientation verification', 'Surface inspection', 'Visual quality validation',
-  'Inspection evidence', 'Quality traceability',
+  'Defect detection',
+  'Presence / absence verification',
+  'Assembly verification',
+  'Position / orientation checks',
+  'Surface condition checks',
+  'Region-based inspection',
 ];
 const applications = ['Engine surface cleaning', 'Bolt tightening sequence', 'Manual assembly', 'Other manual manufacturing workflows'];
 
@@ -17,11 +23,11 @@ function CapabilityList({ items }: { items: string[] }) {
   return <div className="grid gap-x-6 gap-y-0 sm:grid-cols-2">{items.map(item => <div key={item} className="flex items-start gap-3 border-b border-white/[0.07] py-3.5"><Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-cyan-400" strokeWidth={1.8} /><span className="text-sm leading-5 text-steel-200">{item}</span></div>)}</div>;
 }
 
-export function Capabilities() {
+export function Capabilities({ chapterNumber = '02' }: { chapterNumber?: string }) {
   return (
     <section id="capabilities" className="section-pad bg-navy-950">
       <div className="container-x"><div className="content-x">
-        <Reveal className="grid gap-8 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-7"><Chapter n="02" label="Process Monitoring + Visual Inspection" /><h2 className="mt-8 heading-2">Two capabilities. One product.</h2></div><p className="body-lg lg:col-span-5">Video and image intelligence work together inside AI Supervisor. Visual Inspection is a capability inside the station intelligence product, not a separate product.</p></Reveal>
+        <Reveal className="grid gap-8 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-7"><Chapter n={chapterNumber} label="Process Monitoring + Visual Inspection" /><h2 className="mt-8 heading-2">Two capabilities. One product.</h2></div><p className="body-lg lg:col-span-5">Process monitoring reads how work is performed. Visual inspection reads the condition of the part. AI Supervisor brings both into one station view.</p></Reveal>
 
         <div className="mt-14 space-y-5">
           <Reveal id="process-monitoring" className="grid overflow-hidden border border-white/[0.09] bg-navy-800 lg:grid-cols-[.75fr_1.25fr]">

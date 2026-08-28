@@ -5,36 +5,36 @@ const steps = [
   {
     icon: Eye,
     name: 'SEE',
-    text: 'Industrial cameras capture operator actions, product condition and process events.',
+    text: 'Industrial cameras observe the station as work is performed.',
   },
   {
     icon: ScanSearch,
     name: 'UNDERSTAND',
-    text: 'AI understands actions, steps, sequence, visual conditions and SOP context.',
+    text: 'AI interprets actions, parts, timing and station context.',
   },
   {
     icon: ClipboardCheck,
     name: 'VALIDATE',
-    text: 'Correct or incorrect. Complete or incomplete. Expected or unexpected. OK / NOK where applicable.',
+    text: 'The system compares what happened against expected process logic.',
   },
   {
     icon: Zap,
     name: 'ACT',
-    text: 'Alert the operator, trigger a PLC action, prevent workflow bypass, escalate deviations.',
+    text: 'Alerts or control actions can be sent before the cycle moves on.',
   },
   {
     icon: Database,
     name: 'RECORD',
-    text: 'Cycle history, events, evidence, traceability and operational metrics.',
+    text: 'The outcome is stored so teams can review exceptions later.',
   },
 ];
 
-export function HowItWorks() {
+export function HowItWorks({ chapterNumber = '04' }: { chapterNumber?: string }) {
   return (
     <section id="how-it-works" className="border-b border-line bg-panel text-white">
       <div className="container-x py-28 lg:py-36">
         <Reveal>
-          <Chapter n="04" label="How AI Supervisor Works" />
+          <Chapter n={chapterNumber} label="How AI Supervisor Works" />
           <h2 className="mt-10 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
             A digital supervisor at every station
           </h2>

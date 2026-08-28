@@ -9,7 +9,15 @@ const interests = [
   'AI for Manufacturing Functions',
 ];
 
-export function BookDemo({ compact = false, onNavigate }: { compact?: boolean; onNavigate?: (path: string) => void }) {
+export function BookDemo({
+  compact = false,
+  chapterNumber,
+  onNavigate,
+}: {
+  compact?: boolean;
+  chapterNumber?: string;
+  onNavigate?: (path: string) => void;
+}) {
   const [submitted, setSubmitted] = useState(false);
 
   if (compact) {
@@ -17,7 +25,7 @@ export function BookDemo({ compact = false, onNavigate }: { compact?: boolean; o
       <section id="book-demo" className="border-b border-line bg-panel text-white">
         <div className="container-x py-24 text-center lg:py-28">
           <Reveal>
-            <Chapter n="05" label="Book a Demo" />
+            <Chapter n={chapterNumber ?? '05'} label="Book a Demo" />
             <h2 className="mx-auto mt-10 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
               Have a manufacturing workflow you want to improve?
             </h2>
@@ -34,7 +42,7 @@ export function BookDemo({ compact = false, onNavigate }: { compact?: boolean; o
     <section id="book-demo" className="border-b border-line bg-panel text-white">
       <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:py-28">
         <Reveal className="lg:col-span-5">
-          <Chapter n={compact ? '05' : '09'} label="Book a Demo" />
+          <Chapter n={chapterNumber ?? (compact ? '05' : '09')} label="Book a Demo" />
           <h2 className="mt-10 font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
             Have a manufacturing workflow you want to improve?
           </h2>

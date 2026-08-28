@@ -11,27 +11,20 @@ interface ProductPageProps {
   onNavigate: (path: string) => void;
 }
 
-const stationOutcomes = [
-  'Understands operator actions and process execution',
-  'Validates SOP sequence and completion in real time',
-  'Inspects visual conditions at the same station',
-  'Records cycle evidence for traceability and review',
-];
-
 const plcPoints = [
-  'Operator alerts when a process step is missed or incorrect',
-  'OK / NOK decisions where the process logic can be defined',
-  'PLC-linked actions or interlocks for critical workflow control',
-  'Station-level validation before the part moves forward',
+  'Send AI decisions to factory control systems',
+  'Trigger interlocks at critical hold points',
+  'Route operator alerts while action is still possible',
+  'Expose live station state for engineering teams',
 ];
 
 const traceabilityPoints = [
-  'Cycle history',
-  'Process events',
-  'Inspection evidence',
-  'SOP status',
-  'Operator or station context',
-  'Operational metrics',
+  'Cycle ID',
+  'Timestamp',
+  'Station context',
+  'Decision result',
+  'Exception reason',
+  'Evidence snapshot',
 ];
 
 function ProductVisual() {
@@ -100,7 +93,7 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
               </div>
               <h1 className="heading-1">AI Supervisor</h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-steel-300">
-                AI Supervisor gives manufacturing teams real-time visual intelligence at the station level. It combines Process Monitoring and Visual Inspection so teams can validate how work is performed and what happened to the part.
+                AI Supervisor is a production-ready AI layer for station-level manufacturing work, built to turn live visual and process signals into clear decisions.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <button onClick={() => onNavigate('/products/ai-supervisor#book-demo')} className="btn-primary">
@@ -123,30 +116,25 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
           <div className="content-x grid gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
               <Chapter n="01" label="What Is AI Supervisor?" />
-              <h2 className="mt-8 heading-2">A digital supervisor for observable station work.</h2>
+              <h2 className="mt-8 heading-2">A digital supervisor for each station.</h2>
             </Reveal>
             <Reveal className="lg:col-span-7" delay={0.07}>
-              <div className="border-t border-white/[0.08]">
-                {stationOutcomes.map((item, index) => (
-                  <div key={item} className="flex gap-4 border-b border-white/[0.08] py-5">
-                    <span className="text-[10px] font-semibold text-cyan-400">0{index + 1}</span>
-                    <span className="text-base text-steel-300">{item}</span>
-                  </div>
-                ))}
-              </div>
+              <p className="border-y border-white/[0.08] py-8 text-xl leading-9 text-steel-300">
+                It connects cameras, station context and defined process logic so teams can see whether the work at a station is happening as expected.
+              </p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      <Capabilities />
-      <HowItWorks />
+      <Capabilities chapterNumber="02" />
+      <HowItWorks chapterNumber="03" />
 
       <section id="plc-integration" className="section-pad bg-navy-900 text-white">
         <div className="container-x">
           <Reveal className="grid gap-12 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5">
-              <Chapter n="05" label="Real-Time Intervention / PLC Integration" />
+              <Chapter n="04" label="Real-Time Intervention / PLC Integration" />
               <h2 className="mt-8 heading-2">Act while the cycle is still happening.</h2>
               <p className="mt-6 text-base leading-7 text-steel-400">
                 AI Supervisor can connect station intelligence to operator alerts and factory controls, including PLC-linked actions where required.
@@ -168,7 +156,7 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
         <div className="container-x">
           <Reveal className="grid gap-12 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-6">
-              <Chapter n="06" label="Traceability" />
+              <Chapter n="05" label="Traceability" />
               <h2 className="mt-8 heading-2">Turn station activity into cycle evidence.</h2>
             </div>
             <p className="body-lg lg:col-span-5 lg:col-start-8">
@@ -191,9 +179,9 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
         </div>
       </section>
 
-      <DemoVideos />
-      <ProductionProof detailed />
-      <BookDemo />
+      <DemoVideos chapterNumber="06" />
+      <ProductionProof detailed chapterNumber="07" />
+      <BookDemo chapterNumber="08" />
     </div>
   );
 }

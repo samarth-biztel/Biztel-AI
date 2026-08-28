@@ -26,13 +26,13 @@ const demos = [
   },
 ];
 
-export function DemoVideos() {
+export function DemoVideos({ chapterNumber = '07' }: { chapterNumber?: string }) {
   return (
     <section id="demo-videos" className="border-b border-line bg-ink text-white">
       <div className="container-x py-28 lg:py-36">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           <Reveal className="lg:col-span-7">
-            <Chapter n="07" label="Demo Videos" />
+            <Chapter n={chapterNumber} label="Demo Videos" />
             <h2 className="mt-10 max-w-4xl font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
               See AI Supervisor in action
             </h2>
