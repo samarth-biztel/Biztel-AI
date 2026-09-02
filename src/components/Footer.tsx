@@ -6,19 +6,10 @@ interface FooterProps {
 
 const columns = [
   {
-    title: 'Product',
+    title: 'Products',
     links: [
       ['AI Supervisor', '/products/ai-supervisor'],
-      ['Process Monitoring', '/products/ai-supervisor#process-monitoring'],
-      ['Visual Inspection', '/products/ai-supervisor#visual-inspection'],
-    ],
-  },
-  {
-    title: 'Roadmap',
-    links: [
       ['AI Teammates', '/ai-teammates'],
-      ['Production', '/ai-teammates'],
-      ['Quality', '/ai-teammates'],
     ],
   },
   {
@@ -26,6 +17,11 @@ const columns = [
     links: [
       ['About', '/about'],
       ['Contact', '/contact'],
+    ],
+  },
+  {
+    title: 'Next Step',
+    links: [
       ['Book a Demo', '/contact#book-demo'],
     ],
   },
@@ -34,7 +30,7 @@ const columns = [
 export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer id="about" className="bg-ink text-white">
-      <div className="container-x grid gap-16 py-20 lg:grid-cols-12">
+      <div className="container-x grid gap-14 py-20 lg:grid-cols-12">
         <div className="lg:col-span-6">
           <button onClick={() => onNavigate('/')} aria-label="Go to homepage">
             <Logo />
@@ -43,7 +39,7 @@ export function Footer({ onNavigate }: FooterProps) {
             BiztelAI builds AI-powered systems that help manufacturing teams understand what is happening on the shop floor, validate processes, and automate actions.
           </p>
           <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.32em] text-steel-600">
-            The AI Decision Layer for Manufacturing
+            AI-Powered Manufacturing Intelligence
           </p>
         </div>
 
@@ -66,7 +62,7 @@ export function Footer({ onNavigate }: FooterProps) {
       <div className="border-t border-line">
         <div className="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-steel-600 sm:flex-row sm:items-center">
           <p>&copy; 2026 BiztelAI. All rights reserved.</p>
-          <p className="font-mono uppercase tracking-[0.25em]">AI Supervisor - Station Intelligence</p>
+          <p className="font-mono uppercase tracking-[0.25em]">AI-powered factory context</p>
         </div>
       </div>
     </footer>

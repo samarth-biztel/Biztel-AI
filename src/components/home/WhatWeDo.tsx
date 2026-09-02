@@ -15,17 +15,17 @@ const points = [
   },
   {
     label: 'Scale',
-    text: 'From AI Supervisor to AI teammates across functions',
+    text: 'Operational intelligence across manufacturing functions',
   },
 ];
 
 export function WhatWeDo() {
   return (
     <section id="what-we-do" className="border-b border-line bg-panel text-white">
-      <div className="container-x grid gap-14 py-20 lg:grid-cols-12 lg:items-start lg:py-24">
+      <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:items-start lg:py-28">
         <Reveal className="lg:col-span-5">
           <Chapter n="01" label="What We Do" />
-          <p className="mt-10 max-w-xl font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl">
+          <p className="mt-10 max-w-xl font-display text-3xl font-extrabold leading-[1.08] text-white sm:text-4xl">
             AI systems built for manufacturing reality.
           </p>
         </Reveal>
@@ -35,12 +35,12 @@ export function WhatWeDo() {
             {points.map((point, index) => (
               <div
                 key={point.label}
-                className={`min-h-[148px] border-line py-7 sm:px-7 ${
+                className={`min-h-[148px] border-line py-8 sm:px-8 ${
                   index % 2 === 1 ? 'sm:border-l' : ''
                 } ${index > 1 ? 'border-t' : index === 1 ? 'border-t sm:border-t-0' : ''}`}
               >
                 <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">{point.label}</p>
-                <p className="mt-4 text-2xl font-semibold leading-tight text-white">{point.text}</p>
+                <p className="mt-4 text-xl font-semibold leading-tight text-white">{point.text}</p>
               </div>
             ))}
           </div>

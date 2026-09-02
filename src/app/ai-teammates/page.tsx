@@ -70,7 +70,7 @@ export default function AITeammatesPage() {
             <Reveal className="grid gap-10 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
                 <Chapter n="02" label="Roadmap" />
-                <h2 className="mt-8 heading-2">AI teammates are the future vision, not current deployed products.</h2>
+                <h2 className="mt-8 heading-2">AI Teammates are the future product direction.</h2>
               </div>
               <p className="body-lg lg:col-span-5">
                 The current product is AI Supervisor: Process Monitoring and Visual Inspection at the station level.

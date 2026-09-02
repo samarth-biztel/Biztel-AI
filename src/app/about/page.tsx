@@ -20,7 +20,7 @@ export default function AboutPage() {
             <Reveal className="lg:col-span-6">
               <Chapter n="01" label="About BiztelAI" />
               <h1 className="mt-10 max-w-3xl font-display text-5xl font-black leading-[1.02] sm:text-6xl lg:text-7xl">
-                The AI decision layer for manufacturing.
+                AI-powered manufacturing intelligence.
               </h1>
             </Reveal>
             <Reveal className="lg:col-span-5 lg:col-start-8" delay={0.1}>
@@ -33,8 +33,8 @@ export default function AboutPage() {
                   <div className="mt-2 text-sm text-steel-200">AI Supervisor - Process Monitoring + Visual Inspection</div>
                 </div>
                 <div className="border-t py-6 sm:border-t-0 sm:pl-6">
-                  <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-steel-500">Future / In Development</div>
-                  <div className="mt-2 text-sm text-steel-300">AI Teammates for manufacturing functions</div>
+                  <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-steel-500">Direction</div>
+                  <div className="mt-2 text-sm text-steel-300">Operational intelligence across manufacturing functions</div>
                 </div>
               </div>
               <button onClick={() => navigate('/contact#book-demo')} className="btn-primary mt-10">

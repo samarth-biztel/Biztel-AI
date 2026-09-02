@@ -85,17 +85,17 @@
 @layer components {
   .container-x { @apply mx-auto w-full max-w-[1440px] px-6 lg:px-10; }
   .content-x { @apply mx-auto w-full max-w-[1440px]; }
-  .section-pad { @apply py-24 md:py-28 lg:py-36; }
-  .heading-1 { @apply font-display text-[3.3rem] font-black leading-[0.98] md:text-[6rem] lg:text-[7.35rem]; }
-  .heading-2 { @apply font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl; }
+  .section-pad { @apply py-24 md:py-32 lg:py-36; }
+  .heading-1 { @apply font-display text-[2.75rem] font-black leading-[1.02] sm:text-[3.75rem] md:text-[4.9rem] lg:text-[5.8rem]; }
+  .heading-2 { @apply font-display text-3xl font-extrabold leading-[1.08] sm:text-4xl lg:text-5xl; }
   .heading-3 { @apply font-display text-2xl font-bold leading-tight md:text-3xl; }
   .heading-4 { @apply font-display text-lg font-bold leading-snug; }
   .eyebrow { @apply inline-flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.3em] text-steel-500; }
   .chapter { @apply inline-flex items-center gap-4 font-mono text-[11px] uppercase tracking-[0.3em] text-steel-500; }
-  .body-lg { @apply max-w-[75ch] text-lg leading-[1.7] text-steel-300; }
+  .body-lg { @apply max-w-[75ch] text-base leading-[1.75] text-steel-300 md:text-lg; }
   .body-base { @apply text-[15px] leading-7 text-steel-400; }
-  .btn-primary { @apply inline-flex min-h-[52px] items-center justify-center gap-3 bg-accent px-8 font-body text-base font-semibold text-ink transition duration-150 ease-out hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50; }
-  .btn-secondary { @apply inline-flex min-h-[52px] items-center justify-center gap-3 border border-line bg-transparent px-8 font-body text-base font-semibold text-steel-100 transition duration-150 ease-out hover:border-accent hover:text-accent; }
+  .btn-primary { @apply inline-flex min-h-[48px] items-center justify-center gap-2.5 bg-accent px-7 font-body text-sm font-semibold text-ink transition duration-150 ease-out hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-secondary { @apply inline-flex min-h-[48px] items-center justify-center gap-2.5 border border-line bg-transparent px-7 font-body text-sm font-semibold text-steel-100 transition duration-150 ease-out hover:border-accent hover:text-accent; }
   .btn-ghost { @apply inline-flex items-center gap-2 text-sm font-medium text-steel-300 transition-colors duration-200 hover:text-white; }
   .card { @apply border border-line bg-panel; }
   .glass-card { @apply border border-line bg-panel; }

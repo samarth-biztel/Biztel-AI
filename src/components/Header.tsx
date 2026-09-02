@@ -35,16 +35,16 @@ export function Header({ onNavigate, currentPath }: HeaderProps) {
 
   const isProductsActive = productItems.some((item) => item.path === currentPath);
   const navClass = (active: boolean) =>
-    `text-base transition-colors ${active ? 'text-white' : 'text-steel-300 hover:text-white'}`;
+    `text-sm font-medium transition-colors ${active ? 'text-white' : 'text-steel-300 hover:text-white'}`;
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 h-[92px] border-b transition-colors duration-200 ${scrolled ? 'border-line bg-ink/95 backdrop-blur-md' : 'border-transparent bg-ink/45'}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 h-[84px] border-b transition-colors duration-200 ${scrolled ? 'border-line bg-ink/95 backdrop-blur-md' : 'border-transparent bg-ink/45'}`}>
       <div className="container-x flex h-full items-center justify-between">
         <button onClick={() => go('/')} aria-label="Go to homepage">
           <Logo />
         </button>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
           <button onClick={() => go('/')} className={navClass(currentPath === '/')}>
             Home
           </button>
@@ -57,7 +57,7 @@ export function Header({ onNavigate, currentPath }: HeaderProps) {
             >
               Products <ChevronDown className="h-4 w-4" />
             </button>
-            <div className="invisible absolute left-0 top-full min-w-[220px] border border-line bg-ink opacity-0 shadow-2xl shadow-black/30 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <div className="invisible absolute left-0 top-full min-w-[210px] border border-line bg-ink opacity-0 shadow-2xl shadow-black/30 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
               {productItems.map((item) => (
                 <button
                   key={item.path}

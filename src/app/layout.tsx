@@ -24,11 +24,11 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'BiztelAI - The AI Decision Layer for Manufacturing',
-  description: 'Turn factory data and operational reality into intelligence for the people who run the plant.',
+  title: 'BiztelAI - AI-Powered Manufacturing Intelligence',
+  description: 'Turn process, visual and operational context into actionable intelligence for the people running the factory.',
   openGraph: {
-    title: 'BiztelAI - The AI Decision Layer for Manufacturing',
-    description: 'Turn factory data and operational reality into intelligence for the people who run the plant.',
+    title: 'BiztelAI - AI-Powered Manufacturing Intelligence',
+    description: 'Turn process, visual and operational context into actionable intelligence for the people running the factory.',
     type: 'website',
   },
 };
