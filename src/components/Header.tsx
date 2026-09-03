@@ -41,7 +41,7 @@ export function Header({ onNavigate, currentPath }: HeaderProps) {
     <header className={`fixed inset-x-0 top-0 z-50 h-[84px] border-b transition-colors duration-200 ${scrolled ? 'border-line bg-ink/95 backdrop-blur-md' : 'border-transparent bg-ink/45'}`}>
       <div className="container-x flex h-full items-center justify-between">
         <button onClick={() => go('/')} aria-label="Go to homepage">
-          <Logo />
+          <Logo showMark={false} />
         </button>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">

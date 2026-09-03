@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowLeft, ArrowRight, Check, Cpu, Database, Plug, Radio, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Database, Plug, ShieldCheck } from 'lucide-react';
 import { Capabilities } from '@/components/home/Capabilities';
 import { HowItWorks } from '@/components/home/HowItWorks';
 import { DemoVideos } from '@/components/home/DemoVideos';
@@ -27,50 +27,6 @@ const traceabilityPoints = [
   'Evidence snapshot',
 ];
 
-function ProductVisual() {
-  return (
-    <div className="overflow-hidden border border-white/[0.09] bg-navy-900">
-      <div className="flex h-12 items-center justify-between border-b border-white/[0.08] px-5">
-        <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-steel-300">
-          <Radio className="h-3.5 w-3.5 text-green-400" />
-          Station 07 / Live
-        </div>
-        <span className="text-[10px] uppercase tracking-[0.18em] text-steel-600">AI Supervisor</span>
-      </div>
-      <div className="grid min-h-[330px] grid-cols-[1.25fr_.75fr]">
-        <div className="relative border-r border-white/[0.08] grid-bg-fine">
-          <div className="absolute inset-[18%] border border-cyan-400/45">
-            <span className="absolute -top-7 left-0 bg-cyan-400 px-2 py-1 text-[9px] font-semibold uppercase tracking-[0.1em] text-navy-950">
-              Step 04 / Validating
-            </span>
-          </div>
-          <div className="absolute inset-x-[18%] top-[18%] h-1 bg-cyan-400/60 animate-scan" />
-          <Cpu className="absolute bottom-5 left-5 h-5 w-5 text-steel-600" strokeWidth={1.4} />
-        </div>
-        <div className="p-5">
-          <div className="text-[10px] font-semibold uppercase tracking-[0.12em] text-steel-500">Cycle decision</div>
-          <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-green-400">
-            <Check className="h-4 w-4" />
-            Process compliant
-          </div>
-          <div className="mt-6 space-y-4 border-t border-white/[0.07] pt-5">
-            {[
-              ['Sequence', '04 / 05'],
-              ['PLC state', 'Ready'],
-              ['Evidence', 'Recording'],
-            ].map(([label, value]) => (
-              <div key={label} className="flex justify-between text-xs">
-                <span className="text-steel-500">{label}</span>
-                <span className="text-steel-200">{value}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function ProductPage({ onNavigate }: ProductPageProps) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -81,8 +37,8 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
       <section id="what-is-ai-supervisor" className="relative overflow-hidden bg-navy-950 py-20 text-white lg:py-28">
         <div className="absolute inset-0 opacity-35 grid-bg" />
         <div className="container-x relative">
-          <div className="content-x grid gap-14 lg:grid-cols-12 lg:items-center">
-            <Reveal className="lg:col-span-6">
+          <div className="content-x">
+            <Reveal className="max-w-3xl">
               <button onClick={() => onNavigate('/')} className="mb-8 flex items-center gap-2 text-sm text-steel-500 hover:text-white">
                 <ArrowLeft className="h-4 w-4" />
                 Back to home
@@ -103,9 +59,6 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
                   See Demo Videos
                 </button>
               </div>
-            </Reveal>
-            <Reveal className="lg:col-span-6" delay={0.1}>
-              <ProductVisual />
             </Reveal>
           </div>
         </div>
