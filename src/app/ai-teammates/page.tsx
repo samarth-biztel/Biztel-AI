@@ -20,7 +20,7 @@ const teammates = [
   {
     icon: Gauge,
     name: 'AI Process Engineer',
-    question: 'Where is the process deviating from standard?',
+    question: 'Where is the process deviating from the standard?',
   },
   {
     icon: Settings,
@@ -30,12 +30,12 @@ const teammates = [
   {
     icon: FileText,
     name: 'AI Design Engineer',
-    question: 'What does this drawing require for manufacturing?',
+    question: 'What manufacturing requirements does this drawing specify?',
   },
   {
     icon: PackageSearch,
     name: 'AI Supply Chain Engineer',
-    question: 'What is driving this production or material delay?',
+    question: 'What is causing this delay in production or material delivery?',
   },
 ];
 
@@ -50,13 +50,13 @@ export default function AITeammatesPage() {
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="container-x relative">
             <Reveal className="max-w-5xl">
-              <Chapter n="01" label="Future / In Development" />
-              <span className="tag tag-future mt-10">Future / In Development</span>
+              <Chapter n="01" label="In development" />
+              <span className="tag tag-future mt-10">In development</span>
               <h1 className="mt-10 max-w-4xl font-display text-5xl font-black leading-[1.02] sm:text-6xl lg:text-7xl">
                 AI Teammates for Every Manufacturing Function
               </h1>
               <p className="mt-8 max-w-3xl text-xl leading-9 text-steel-300">
-                As BiztelAI builds deeper manufacturing context, AI can assist the engineers responsible for production, quality, process, maintenance and engineering decisions.
+                BiztelAI is developing AI teammates with a deeper understanding of manufacturing to help teams make informed decisions across production, quality, process engineering, maintenance, design and supply chain management.
               </p>
               <button onClick={() => navigate('/contact#book-demo')} className="btn-primary mt-10">
                 Book a Demo <ArrowRight className="h-4 w-4" />
@@ -70,10 +70,10 @@ export default function AITeammatesPage() {
             <Reveal className="grid gap-10 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
                 <Chapter n="02" label="Roadmap" />
-                <h2 className="mt-8 heading-2">AI Teammates are the future product direction.</h2>
+                <h2 className="mt-8 heading-2">AI Teammates are in development.</h2>
               </div>
               <p className="body-lg lg:col-span-5">
-                The current product is AI Supervisor: Process Monitoring and Visual Inspection at the station level.
+                AI Supervisor is our current product for process monitoring and visual inspection at the station level.
               </p>
             </Reveal>
 
@@ -82,7 +82,7 @@ export default function AITeammatesPage() {
                 <Reveal key={teammate.name} delay={(index % 3) * 0.06} className="h-full">
                   <article className={`h-full min-h-[280px] bg-panel p-8 lg:p-10 ${index % 3 !== 0 ? 'lg:border-l' : ''} ${index >= 3 ? 'border-t' : ''} ${index % 2 !== 0 ? 'md:border-l lg:border-l' : ''}`}>
                     <teammate.icon className="h-6 w-6 text-accent" strokeWidth={1.6} />
-                    <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.3em] text-steel-600">Future / In Development</p>
+                    <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.3em] text-steel-600">In development</p>
                     <h3 className="mt-5 font-display text-2xl font-extrabold text-white">{teammate.name}</h3>
                     <blockquote className="mt-7 border-l-2 border-accent pl-5 text-lg italic leading-8 text-white">
                       "{teammate.question}"

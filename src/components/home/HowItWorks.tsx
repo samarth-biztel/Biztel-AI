@@ -15,12 +15,12 @@ const steps = [
   {
     icon: ClipboardCheck,
     name: 'VALIDATE',
-    text: 'The system compares what happened against expected process logic.',
+    text: 'The system checks what happened against the expected process logic.',
   },
   {
     icon: Zap,
     name: 'ACT',
-    text: 'Alerts or control actions can be sent before the cycle moves on.',
+    text: 'The system can send alerts or trigger control actions before the cycle advances.',
   },
   {
     icon: Database,

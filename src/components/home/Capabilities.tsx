@@ -27,7 +27,7 @@ export function Capabilities({ chapterNumber = '02' }: { chapterNumber?: string 
   return (
     <section id="capabilities" className="section-pad bg-navy-950">
       <div className="container-x"><div className="content-x">
-        <Reveal className="grid gap-8 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-7"><Chapter n={chapterNumber} label="Process Monitoring + Visual Inspection" /><h2 className="mt-8 heading-2">Two capabilities. One product.</h2></div><p className="body-lg lg:col-span-5">Process monitoring reads how work is performed. Visual inspection reads the condition of the part. AI Supervisor brings both into one station view.</p></Reveal>
+        <Reveal className="grid gap-8 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-7"><Chapter n={chapterNumber} label="Process Monitoring + Visual Inspection" /><h2 className="mt-8 heading-2">Two capabilities. One product.</h2></div><p className="body-lg lg:col-span-5">Process monitoring tracks how work is performed. Visual inspection assesses the condition of the part. AI Supervisor brings both together in a single station view.</p></Reveal>
 
         <div className="mt-14 space-y-5">
           <Reveal id="process-monitoring" className="grid overflow-hidden border border-white/[0.09] bg-navy-800 lg:grid-cols-[.75fr_1.25fr]">

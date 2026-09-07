@@ -6,22 +6,22 @@ const demos = [
     number: '01',
     title: 'Cleaning Process',
     caption: 'AI-powered monitoring of a manual manufacturing process.',
-    poster: '/demo-cleaning.svg',
+    poster: '/videos/cleaning_poster.jpg',
     src: '/videos/cleaning_process.mp4',
     pdf: '/cleaning_process.pdf',
     monitored: 'Operator actions and surface preparation steps',
-    understands: 'Step sequence, missed or incorrect actions',
-    output: 'SOP validation, operator alerts, cycle record',
+    understands: 'Step sequences and missed or incorrect actions',
+    output: 'SOP validation, operator alerts, cycle records',
   },
   {
     number: '02',
     title: 'Tightening Process',
     caption: 'AI-powered validation of a manufacturing workflow.',
-    poster: '/demo-tightening.svg',
+    poster: '/videos/tightening_poster.jpg',
     src: '/videos/tightening_process.mp4',
     pdf: '/tightening_process.pdf',
     monitored: 'Bolt tightening sequence and tool events',
-    understands: 'Sequence order, completion, deviations',
+    understands: 'Sequence order, completion and deviations',
     output: 'OK / NOK validation, PLC interlock, traceability',
   },
 ];
@@ -39,7 +39,7 @@ export function DemoVideos({ chapterNumber = '07' }: { chapterNumber?: string })
           </Reveal>
           <Reveal className="lg:col-span-5 lg:pt-14" delay={0.1}>
             <p className="max-w-xl text-lg leading-8 text-steel-500">
-              BiztelAI demonstration footage - never confidential customer production data. Each demo shows what is monitored, what the AI understands, and what the system does about it.
+              These videos show BiztelAI demonstration footage and contain no confidential customer production data. Each demo shows what is monitored, what the AI understands and how the system responds.
             </p>
           </Reveal>
         </div>

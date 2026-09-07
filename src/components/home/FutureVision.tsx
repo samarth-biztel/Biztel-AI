@@ -17,17 +17,17 @@ export function FutureVision({ onNavigate }: { onNavigate?: (path: string) => vo
         <Reveal className="lg:col-span-6">
           <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
             <Chapter n="03" label="Roadmap" />
-            <span className="tag tag-future">Future Direction</span>
+            <span className="tag tag-future">In development</span>
           </div>
-          <h2 className="mt-8 font-display text-4xl font-extrabold leading-none sm:text-5xl">AI support across manufacturing</h2>
-          <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.3em] text-accent">Manufacturing Functions</p>
+          <h2 className="mt-8 font-display text-4xl font-extrabold leading-none sm:text-5xl">AI Teammates for Manufacturing</h2>
+          <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.3em] text-accent">Factory Intelligence</p>
           <p className="mt-4 font-display text-xl font-bold text-white">Role-aware assistance for factory teams</p>
           <p className="mt-7 text-lg leading-8 text-steel-300">
-            As BiztelAI builds deeper manufacturing context, AI can assist the people responsible for production, quality, process, maintenance, design and supply-chain decisions.
+            BiztelAI is developing AI teammates with a deeper understanding of manufacturing to help teams make informed decisions across production, quality, process engineering, maintenance, design and supply chain management.
           </p>
           {onNavigate && (
             <button onClick={() => onNavigate('/contact#book-demo')} className="btn-secondary mt-10">
-              Discuss Roadmap <ArrowRight className="h-4 w-4" />
+              Discuss the Roadmap <ArrowRight className="h-4 w-4" />
             </button>
           )}
         </Reveal>

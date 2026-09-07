@@ -21,7 +21,7 @@ export function AISupervisor({ onNavigate }: { onNavigate?: (path: string) => vo
           <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.3em] text-accent">Station Intelligence</p>
           <p className="mt-4 font-display text-xl font-bold text-white">Process Monitoring + Visual Inspection</p>
           <p className="mt-7 text-lg leading-8 text-steel-300">
-            AI Supervisor helps manufacturing teams understand what is happening at a station, validate process execution and catch visual issues as work happens.
+            AI Supervisor helps manufacturing teams understand what is happening at a station, validate process execution and identify visual issues as work is performed.
           </p>
           {onNavigate && (
             <button onClick={() => onNavigate('/products/ai-supervisor')} className="btn-primary mt-10">

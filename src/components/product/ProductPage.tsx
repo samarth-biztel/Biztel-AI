@@ -49,7 +49,7 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
               </div>
               <h1 className="heading-1">AI Supervisor</h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-steel-300">
-                AI Supervisor turns live process, visual and station context into clear decisions for manufacturing teams running critical workflows.
+                AI Supervisor uses live process data, visual information and station context to support clear decisions for manufacturing teams running critical workflows.
               </p>
               <div className="mt-9 flex flex-wrap gap-3">
                 <button onClick={() => onNavigate('/products/ai-supervisor#book-demo')} className="btn-primary">
@@ -69,11 +69,11 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
           <div className="content-x grid gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
               <Chapter n="01" label="What Is AI Supervisor?" />
-              <h2 className="mt-8 heading-2">A product story for live manufacturing work.</h2>
+              <h2 className="mt-8 heading-2">AI supervision for live manufacturing workflows.</h2>
             </Reveal>
             <Reveal className="lg:col-span-7" delay={0.07}>
               <p className="border-y border-white/[0.08] py-8 text-lg leading-9 text-steel-300 md:text-xl">
-                It connects cameras, station context and defined process logic so teams can see whether work is happening as expected, whether the part is visually acceptable and what action should happen next.
+                It combines camera feeds, station context and defined process logic so teams can see whether work is proceeding as expected, whether the part is visually acceptable and what action should be taken next.
               </p>
             </Reveal>
           </div>
@@ -90,7 +90,7 @@ export function ProductPage({ onNavigate }: ProductPageProps) {
               <Chapter n="04" label="Deployment" />
               <h2 className="mt-8 heading-2">Deploy at the station, then connect to operations.</h2>
               <p className="mt-6 text-base leading-7 text-steel-400">
-                AI Supervisor is designed for line-side deployment: cameras observe the workflow, AI runs close to the station, and outputs can connect to operator alerts, traceability systems and PLC-linked actions.
+                AI Supervisor is designed for line-side deployment: cameras observe the workflow, AI runs close to the station, and its outputs can trigger operator alerts, update traceability systems and initiate PLC-linked actions.
               </p>
             </div>
             <div className="grid gap-4 lg:col-span-7">

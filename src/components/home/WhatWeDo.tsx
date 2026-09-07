@@ -22,15 +22,15 @@ const points = [
 export function WhatWeDo() {
   return (
     <section id="what-we-do" className="border-b border-line bg-panel text-white">
-      <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:items-start lg:py-28">
-        <Reveal className="lg:col-span-5">
+      <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:items-center lg:py-28">
+        <Reveal className="lg:col-span-6">
           <Chapter n="01" label="What We Do" />
-          <p className="mt-10 max-w-xl font-display text-3xl font-extrabold leading-[1.08] text-white sm:text-4xl">
+          <h2 className="mt-8 font-display text-4xl font-extrabold leading-none sm:text-5xl">
             AI systems built for manufacturing reality.
-          </p>
+          </h2>
         </Reveal>
 
-        <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.12}>
+        <Reveal className="lg:col-span-5 lg:col-start-8" delay={0.12}>
           <div className="grid border-y border-line sm:grid-cols-2">
             {points.map((point, index) => (
               <div

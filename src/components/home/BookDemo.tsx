@@ -57,7 +57,7 @@ export function BookDemo({
               <CheckCircle2 className="h-10 w-10 text-accent" strokeWidth={1.6} />
               <h3 className="mt-8 font-display text-3xl font-extrabold">Request captured</h3>
               <p className="mt-4 text-lg leading-8 text-steel-300">
-                Thanks. The BiztelAI team will use these details to prepare the next conversation.
+                Thank you. The BiztelAI team will use these details to prepare for our next conversation.
               </p>
               <button onClick={() => setSubmitted(false)} className="btn-secondary mt-10">
                 Submit another request
@@ -87,7 +87,7 @@ export function BookDemo({
                 <label className="block">
                   <span className="mb-2 block font-mono text-[11px] uppercase tracking-[0.24em] text-steel-500">Area</span>
                   <select className="select-field" defaultValue="">
-                    <option value="" disabled>Select area</option>
+                    <option value="" disabled>Select an area</option>
                     {interests.map((interest) => (
                       <option key={interest}>{interest}</option>
                     ))}

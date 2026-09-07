@@ -52,7 +52,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
             <span className="block">in production.</span>
           </h2>
           <p className="mt-10 max-w-[520px] text-xl leading-8 text-steel-300">
-            AI Supervisor has been used in a real automotive manufacturing environment, with cycle volume and deployment context cleared for public communication.
+            AI Supervisor has been used in an automotive manufacturing environment. The monitored cycle count and deployment details have been approved for public sharing.
           </p>
 
           <div className="mt-16 border-t border-line pt-12">
@@ -78,7 +78,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
             ))}
           </div>
           <p className="mt-8 max-w-[620px] text-sm leading-7 text-steel-600">
-            Shared with approval for public communication. No confidential production footage or customer information is shown.
+            These details are shared with approval for public communication. No confidential production footage or customer information is shown.
           </p>
         </Reveal>
       </div>
