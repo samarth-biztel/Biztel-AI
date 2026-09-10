@@ -43,10 +43,10 @@ export default function AITeammatesPage() {
   const navigate = useSiteNavigation();
 
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-surface">
       <Header onNavigate={navigate} currentPath="/ai-teammates" />
-      <main className="pt-[84px] text-white">
-        <section className="relative overflow-hidden border-b border-line bg-ink py-20 lg:py-28">
+      <main className="pt-[84px] text-ink">
+        <section className="relative overflow-hidden border-b border-line bg-surface py-20 lg:py-28">
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="container-x relative">
             <Reveal className="max-w-5xl">
@@ -65,7 +65,7 @@ export default function AITeammatesPage() {
           </div>
         </section>
 
-        <section className="section-pad bg-navy-950">
+        <section className="section-pad bg-surface">
           <div className="container-x">
             <Reveal className="grid gap-10 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
@@ -80,11 +80,11 @@ export default function AITeammatesPage() {
             <div className="mt-14 grid border border-line md:grid-cols-2 lg:grid-cols-3">
               {teammates.map((teammate, index) => (
                 <Reveal key={teammate.name} delay={(index % 3) * 0.06} className="h-full">
-                  <article className={`h-full min-h-[280px] bg-panel p-8 lg:p-10 ${index % 3 !== 0 ? 'lg:border-l' : ''} ${index >= 3 ? 'border-t' : ''} ${index % 2 !== 0 ? 'md:border-l lg:border-l' : ''}`}>
+                  <article className={`h-full min-h-[280px] bg-muted p-8 lg:p-10 ${index % 3 !== 0 ? 'lg:border-l' : ''} ${index >= 3 ? 'border-t' : ''} ${index % 2 !== 0 ? 'md:border-l lg:border-l' : ''}`}>
                     <teammate.icon className="h-6 w-6 text-accent" strokeWidth={1.6} />
                     <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.3em] text-steel-600">In development</p>
-                    <h3 className="mt-5 font-display text-2xl font-extrabold text-white">{teammate.name}</h3>
-                    <blockquote className="mt-7 border-l-2 border-accent pl-5 text-lg italic leading-8 text-white">
+                    <h3 className="mt-5 font-display text-2xl font-extrabold text-ink">{teammate.name}</h3>
+                    <blockquote className="mt-7 border-l-2 border-accent pl-5 text-lg italic leading-8 text-ink">
                       "{teammate.question}"
                     </blockquote>
                   </article>
@@ -94,11 +94,11 @@ export default function AITeammatesPage() {
           </div>
         </section>
 
-        <section className="border-b border-line bg-panel py-20">
+        <section className="border-b border-line bg-muted py-20">
           <div className="container-x flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-steel-500">Current product</p>
-              <h2 className="mt-4 font-display text-3xl font-extrabold text-white">AI Supervisor is available today.</h2>
+              <h2 className="mt-4 font-display text-3xl font-extrabold text-ink">AI Supervisor is available today.</h2>
             </div>
             <button onClick={() => navigate('/products/ai-supervisor')} className="btn-secondary">
               Explore AI Supervisor <ArrowRight className="h-4 w-4" />

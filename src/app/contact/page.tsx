@@ -9,7 +9,7 @@ export default function ContactPage() {
   const navigate = useSiteNavigation();
 
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-surface">
       <Header onNavigate={navigate} currentPath="/contact" />
       <main className="pt-[84px]">
         <BookDemo />

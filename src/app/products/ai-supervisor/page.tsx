@@ -8,7 +8,7 @@ import { useSiteNavigation } from '@/hooks/useSiteNavigation';
 export default function AISupervisorPage() {
   const navigate = useSiteNavigation();
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-surface">
       <Header onNavigate={navigate} currentPath="/products/ai-supervisor" />
       <main><ProductPage onNavigate={navigate} /></main>
       <Footer onNavigate={navigate} />

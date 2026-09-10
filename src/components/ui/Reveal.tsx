@@ -30,7 +30,11 @@ export function Chapter({ n, label }: { n: string; label: string }) {
     <div className="chapter" data-testid={`chapter-${label.toLowerCase().replace(/\s+/g, '-')}`}>
       <span className="text-accent">{n}</span>
       <span className="h-px w-12 bg-line" />
-      <span>{label}</span>
+      <span>
+        {label.split(/(BiztelAI)/).map((part, index) => (
+          <span key={index} className={part === 'BiztelAI' ? 'normal-case' : undefined}>{part}</span>
+        ))}
+      </span>
     </div>
   );
 }

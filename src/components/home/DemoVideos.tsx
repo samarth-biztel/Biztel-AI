@@ -28,7 +28,7 @@ const demos = [
 
 export function DemoVideos({ chapterNumber = '07' }: { chapterNumber?: string }) {
   return (
-    <section id="demo-videos" className="border-b border-line bg-ink text-white">
+    <section id="demo-videos" className="border-b border-line bg-surface text-ink">
       <div className="container-x py-28 lg:py-36">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           <Reveal className="lg:col-span-7">
@@ -47,10 +47,10 @@ export function DemoVideos({ chapterNumber = '07' }: { chapterNumber?: string })
         <div className="mt-20 grid gap-7 lg:grid-cols-2">
           {demos.map((demo, index) => (
             <Reveal key={demo.title} delay={index * 0.1} className="h-full">
-              <article className="h-full overflow-hidden border border-line bg-panel">
+              <article className="h-full overflow-hidden border border-line bg-muted">
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <video
-                    className="h-full w-full bg-navy-950 object-cover"
+                    className="h-full w-full bg-surface object-cover"
                     controls
                     muted
                     preload="metadata"
@@ -59,7 +59,7 @@ export function DemoVideos({ chapterNumber = '07' }: { chapterNumber?: string })
                   >
                     <source src={demo.src} type="video/mp4" />
                   </video>
-                  <span className="pointer-events-none absolute left-6 top-6 bg-ink/85 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.34em] text-accent">
+                  <span className="pointer-events-none absolute left-6 top-6 bg-surface/85 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.34em] text-accent">
                     Demo {demo.number}
                   </span>
                 </div>
@@ -75,7 +75,7 @@ export function DemoVideos({ chapterNumber = '07' }: { chapterNumber?: string })
                     ].map(([label, value]) => (
                       <div key={label} className="grid gap-4 py-5 text-base sm:grid-cols-[160px_1fr]">
                         <span className="font-mono text-[11px] uppercase tracking-[0.32em] text-steel-500">{label}</span>
-                        <span className="text-white">{value}</span>
+                        <span className="text-ink">{value}</span>
                       </div>
                     ))}
                   </div>

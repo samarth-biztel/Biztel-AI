@@ -10,7 +10,7 @@ const proofStats = [
 
 export function AISupervisor({ onNavigate }: { onNavigate?: (path: string) => void }) {
   return (
-    <section id="ai-supervisor" className="border-b border-line bg-ink text-white">
+    <section id="ai-supervisor" className="border-b border-line bg-surface text-ink">
       <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:items-center lg:py-28">
         <Reveal className="lg:col-span-6">
           <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
@@ -19,7 +19,7 @@ export function AISupervisor({ onNavigate }: { onNavigate?: (path: string) => vo
           </div>
           <h2 className="mt-8 font-display text-4xl font-extrabold leading-none sm:text-5xl">AI Supervisor</h2>
           <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.3em] text-accent">Station Intelligence</p>
-          <p className="mt-4 font-display text-xl font-bold text-white">Process Monitoring + Visual Inspection</p>
+          <p className="mt-4 font-display text-xl font-bold text-ink">Process Monitoring + Visual Inspection</p>
           <p className="mt-7 text-lg leading-8 text-steel-300">
             AI Supervisor helps manufacturing teams understand what is happening at a station, validate process execution and identify visual issues as work is performed.
           </p>
@@ -38,7 +38,7 @@ export function AISupervisor({ onNavigate }: { onNavigate?: (path: string) => vo
             {proofStats.map((point, index) => (
               <p
                 key={point}
-                className={`min-h-[128px] border-line py-8 text-xl font-semibold leading-tight text-white sm:px-8 ${
+                className={`min-h-[128px] border-line py-8 text-xl font-semibold leading-tight text-ink sm:px-8 ${
                   index % 2 === 1 ? 'sm:border-l' : ''
                 } ${index > 1 ? 'border-t' : index === 1 ? 'border-t sm:border-t-0' : ''}`}
               >

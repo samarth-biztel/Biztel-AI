@@ -29,7 +29,7 @@ const columns = [
 
 export function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer id="about" className="bg-ink text-white">
+    <footer id="about" className="bg-surface text-ink">
       <div className="container-x grid gap-14 py-20 lg:grid-cols-12">
         <div className="lg:col-span-6">
           <button onClick={() => onNavigate('/')} aria-label="Go to homepage">

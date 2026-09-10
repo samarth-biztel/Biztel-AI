@@ -13,8 +13,8 @@ export function Logo({ className = '', variant = 'full', showMark = true }: Logo
         </span>
       )}
       {variant === 'full' && (
-        <span className="font-display text-[22px] font-black uppercase leading-none tracking-normal text-white">
-          BIZTEL<span className="text-accent">AI</span>
+        <span className="font-display text-[22px] font-black normal-case leading-none tracking-normal text-ink">
+          Biztel<span className="text-accent">AI</span>
         </span>
       )}
     </div>

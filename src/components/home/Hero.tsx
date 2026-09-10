@@ -3,11 +3,9 @@ import { motion } from 'framer-motion';
 
 export function Hero({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (
-    <section className="relative overflow-hidden border-b border-line bg-ink pt-[84px]">
+    <section className="relative overflow-hidden border-b border-line bg-surface pt-[84px]">
       <div className="absolute inset-0 hero-industrial-bg" />
       <div className="absolute inset-0 grid-bg opacity-70" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,15,24,.9)_0%,rgba(10,15,24,.64)_52%,rgba(10,15,24,.42)_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,15,24,.38)_0%,rgba(10,15,24,.02)_45%,rgba(10,15,24,.62)_100%)]" />
 
       <div className="container-x relative flex min-h-[calc(74vh-84px)] flex-col justify-center py-20 lg:min-h-[calc(80vh-84px)] lg:py-28">
         <motion.div
@@ -16,7 +14,7 @@ export function Hero({ onNavigate }: { onNavigate: (path: string) => void }) {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="w-full"
         >
-          <h1 className="heading-1 max-w-[1040px] text-white">
+          <h1 className="heading-1 max-w-[1040px] text-ink">
             AI-Powered Manufacturing Intelligence
           </h1>
 

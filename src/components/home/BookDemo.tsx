@@ -22,7 +22,7 @@ export function BookDemo({
 
   if (compact) {
     return (
-      <section id="book-demo" className="border-b border-line bg-panel text-white">
+      <section id="book-demo" className="border-b border-line bg-muted text-ink">
         <div className="container-x py-24 text-center lg:py-28">
           <Reveal>
             <Chapter n={chapterNumber ?? '05'} label="Book a Demo" />
@@ -39,7 +39,7 @@ export function BookDemo({
   }
 
   return (
-    <section id="book-demo" className="border-b border-line bg-panel text-white">
+    <section id="book-demo" className="border-b border-line bg-muted text-ink">
       <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:py-28">
         <Reveal className="lg:col-span-5">
           <Chapter n={chapterNumber ?? (compact ? '05' : '09')} label="Book a Demo" />
@@ -53,7 +53,7 @@ export function BookDemo({
 
         <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.1}>
           {submitted ? (
-            <div className="border border-line bg-ink p-10">
+            <div className="border border-line bg-surface p-10">
               <CheckCircle2 className="h-10 w-10 text-accent" strokeWidth={1.6} />
               <h3 className="mt-8 font-display text-3xl font-extrabold">Request captured</h3>
               <p className="mt-4 text-lg leading-8 text-steel-300">
@@ -65,7 +65,7 @@ export function BookDemo({
             </div>
           ) : (
             <form
-              className="border border-line bg-ink p-7 lg:p-10"
+              className="border border-line bg-surface p-7 lg:p-10"
               onSubmit={(event) => {
                 event.preventDefault();
                 setSubmitted(true);

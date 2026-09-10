@@ -35,10 +35,10 @@ export function Header({ onNavigate, currentPath }: HeaderProps) {
 
   const isProductsActive = productItems.some((item) => item.path === currentPath);
   const navClass = (active: boolean) =>
-    `text-sm font-medium transition-colors ${active ? 'text-white' : 'text-steel-300 hover:text-white'}`;
+    `text-sm font-medium transition-colors ${active ? 'text-ink' : 'text-steel-300 hover:text-ink'}`;
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 h-[84px] border-b transition-colors duration-200 ${scrolled ? 'border-line bg-ink/95 backdrop-blur-md' : 'border-transparent bg-ink/45'}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 h-[84px] border-b transition-colors duration-200 ${scrolled ? 'border-line bg-surface/95 backdrop-blur-md' : 'border-transparent bg-surface/45'}`}>
       <div className="container-x flex h-full items-center justify-between">
         <button onClick={() => go('/')} aria-label="Go to homepage">
           <Logo showMark={false} />
@@ -57,12 +57,12 @@ export function Header({ onNavigate, currentPath }: HeaderProps) {
             >
               Products <ChevronDown className="h-4 w-4" />
             </button>
-            <div className="invisible absolute left-0 top-full min-w-[210px] border border-line bg-ink opacity-0 shadow-2xl shadow-black/30 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <div className="invisible absolute left-0 top-full min-w-[210px] border border-line bg-surface opacity-0 shadow-2xl shadow-slate-900/10 transition duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
               {productItems.map((item) => (
                 <button
                   key={item.path}
                   onClick={() => go(item.path)}
-                  className={`block w-full px-5 py-4 text-left text-sm transition-colors hover:bg-panel hover:text-accent ${currentPath === item.path ? 'text-white' : 'text-steel-300'}`}
+                  className={`block w-full px-5 py-4 text-left text-sm transition-colors hover:bg-muted hover:text-accent ${currentPath === item.path ? 'text-ink' : 'text-steel-300'}`}
                 >
                   {item.label}
                 </button>
@@ -87,7 +87,7 @@ export function Header({ onNavigate, currentPath }: HeaderProps) {
       </div>
 
       {mobileOpen && (
-        <nav className="border-b border-line bg-ink px-6 pb-6 lg:hidden" aria-label="Mobile navigation">
+        <nav className="border-b border-line bg-surface px-6 pb-6 lg:hidden" aria-label="Mobile navigation">
           <button onClick={() => go('/')} className="block w-full border-b border-line py-4 text-left text-sm text-steel-200">
             Home
           </button>

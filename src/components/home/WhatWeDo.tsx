@@ -21,7 +21,7 @@ const points = [
 
 export function WhatWeDo() {
   return (
-    <section id="what-we-do" className="border-b border-line bg-panel text-white">
+    <section id="what-we-do" className="border-b border-line bg-muted text-ink">
       <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:items-center lg:py-28">
         <Reveal className="lg:col-span-6">
           <Chapter n="01" label="What We Do" />
@@ -40,7 +40,7 @@ export function WhatWeDo() {
                 } ${index > 1 ? 'border-t' : index === 1 ? 'border-t sm:border-t-0' : ''}`}
               >
                 <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">{point.label}</p>
-                <p className="mt-4 text-xl font-semibold leading-tight text-white">{point.text}</p>
+                <p className="mt-4 text-xl font-semibold leading-tight text-ink">{point.text}</p>
               </div>
             ))}
           </div>

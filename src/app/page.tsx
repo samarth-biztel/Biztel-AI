@@ -12,7 +12,7 @@ import { useSiteNavigation } from '@/hooks/useSiteNavigation';
 export default function HomePage() {
   const navigate = useSiteNavigation();
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-surface">
       <Header onNavigate={navigate} currentPath="/" />
       <main>
         <Hero onNavigate={navigate} />

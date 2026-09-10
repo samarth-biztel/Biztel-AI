@@ -4,17 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#0A0F18',
-        panel: '#0D131F',
-        navy2: '#111827',
-        navy3: '#1A2332',
-        line: { DEFAULT: '#2A3441', light: '#374151' },
-        accent: '#00E5FF',
-        navy: { 700: '#19273a', 800: '#131f30', 900: '#0d1626', 950: '#0A0F18', 980: '#050913' },
-        steel: { 100: '#ffffff', 200: '#d9e0e9', 300: '#a9b4c4', 400: '#8794a7', 500: '#738096', 600: '#536176', 700: '#344256', 800: '#1d2a3b' },
-        cyan: { 300: '#66F2FF', 400: '#00E5FF', 500: '#00BDD4' },
-        green: { 400: '#56c68a' },
-        amber: { 400: '#d6aa58' },
+        surface: '#ffffff',
+        muted: '#f5f8fa',
+        subtle: '#edf3f6',
+        ink: '#152536',
+        line: { DEFAULT: '#d4dfe7', light: '#bacbd7' },
+        accent: '#007c91',
+        steel: { 100: '#152536', 200: '#304457', 300: '#465b6d', 400: '#526678', 500: '#5b6e7e', 600: '#627383', 700: '#718292', 800: '#8595a3' },
+        cyan: { 300: '#006779', 400: '#007c91', 500: '#006b7e' },
+        green: { 400: '#23814d' },
+        amber: { 400: '#946514' },
       },
       fontFamily: {
         sans: ['var(--font-body)', 'ui-sans-serif', 'system-ui', 'sans-serif'],

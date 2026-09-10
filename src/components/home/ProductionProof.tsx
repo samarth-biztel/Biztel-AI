@@ -17,7 +17,7 @@ const detailPoints = [
 export function ProductionProof({ detailed = false, chapterNumber }: { detailed?: boolean; chapterNumber?: string }) {
   if (!detailed) {
     return (
-      <section id="production-proof" className="border-b border-line bg-panel text-white">
+      <section id="production-proof" className="border-b border-line bg-muted text-ink">
         <div className="container-x py-20 lg:py-24">
           <Reveal>
             <Chapter n={chapterNumber ?? '03'} label="Production Proof" />
@@ -30,7 +30,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
               ].map((point, index) => (
                 <p
                   key={point}
-                  className={`text-2xl font-semibold text-white ${index > 0 ? 'lg:border-l lg:border-line lg:pl-8' : ''}`}
+                  className={`text-2xl font-semibold text-ink ${index > 0 ? 'lg:border-l lg:border-line lg:pl-8' : ''}`}
                 >
                   {point}
                 </p>
@@ -43,7 +43,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
   }
 
   return (
-    <section id="production-proof" className="border-b border-line bg-panel text-white">
+    <section id="production-proof" className="border-b border-line bg-muted text-ink">
       <div className="container-x grid gap-16 py-24 lg:grid-cols-12 lg:py-28">
         <Reveal className="lg:col-span-6">
           <Chapter n={chapterNumber ?? '08'} label="Production Proof" />
@@ -56,7 +56,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
           </p>
 
           <div className="mt-16 border-t border-line pt-12">
-            <p className="font-display text-7xl font-black leading-none text-white sm:text-8xl lg:text-[7.5rem]">
+            <p className="font-display text-7xl font-black leading-none text-ink sm:text-8xl lg:text-[7.5rem]">
               50,000<span className="text-accent">+</span>
             </p>
             <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.34em] text-steel-500">
@@ -72,7 +72,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
           <div className="mt-10 divide-y divide-line border-y border-line">
             {detailPoints.map((point, index) => (
               <div key={point} className="flex items-center justify-between py-6">
-                <span className="text-xl text-white">{point}</span>
+                <span className="text-xl text-ink">{point}</span>
                 <span className="font-mono text-xs text-steel-600">{String(index + 1).padStart(2, '0')}</span>
               </div>
             ))}

@@ -11,10 +11,10 @@ export default function AboutPage() {
   const navigate = useSiteNavigation();
 
   return (
-    <div className="min-h-screen bg-navy-950">
+    <div className="min-h-screen bg-surface">
       <Header onNavigate={navigate} currentPath="/about" />
-      <main className="pt-[84px] text-white">
-        <section className="relative overflow-hidden border-b border-line bg-ink py-20 lg:py-28">
+      <main className="pt-[84px] text-ink">
+        <section className="relative overflow-hidden border-b border-line bg-surface py-20 lg:py-28">
           <div className="absolute inset-0 grid-bg opacity-50" />
           <div className="container-x relative grid gap-12 lg:grid-cols-12">
             <Reveal className="lg:col-span-6">
