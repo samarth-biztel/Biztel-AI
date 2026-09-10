@@ -16,6 +16,8 @@ const columns = [
     title: 'Company',
     links: [
       ['About', '/about'],
+      ['Privacy Policies', '/privacy-policy'],
+      ['Terms and Condition', '/terms-and-conditions'],
       ['Contact', '/contact'],
     ],
   },
