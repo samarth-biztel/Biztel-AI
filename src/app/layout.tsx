@@ -24,6 +24,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: '_uvZIiHSQQT1ySblIwu9vNBL39Gm5GnuFsB3_ExyPO0',
+  },
   title: 'BiztelAI - AI-Powered Manufacturing Intelligence',
   description: 'Turn process, visual and operational context into actionable intelligence for the people running the factory.',
   openGraph: {
