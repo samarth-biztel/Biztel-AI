@@ -149,6 +149,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  /* Override server-rendered and in-flight animation styles, even before hydration. */
+  .motion-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
   *,
   *::before,
   *::after {

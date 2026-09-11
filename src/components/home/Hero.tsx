@@ -1,7 +1,8 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export function Hero({ onNavigate }: { onNavigate: (path: string) => void }) {
+  const reduced = useReducedMotion();
   return (
     <section className="relative overflow-hidden border-b border-line bg-surface pt-[84px]">
       <div className="absolute inset-0 hero-industrial-bg" />
@@ -9,10 +10,10 @@ export function Hero({ onNavigate }: { onNavigate: (path: string) => void }) {
 
       <div className="container-x relative flex min-h-[calc(74vh-84px)] flex-col justify-center py-20 lg:min-h-[calc(80vh-84px)] lg:py-28">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
+          initial={reduced ? false : { opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full"
+          transition={{ duration: reduced ? 0 : 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="motion-reveal w-full"
         >
           <h1 className="heading-1 max-w-[1040px] text-ink">
             AI-Powered Manufacturing Intelligence

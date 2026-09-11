@@ -3,7 +3,7 @@ import { Reveal, Chapter } from '@/components/ui/Reveal';
 const proofPoints = [
   'Live production deployment',
   'Global automotive OEM environment',
-  '50,000+ monitored cycles',
+  '1,25,000+ monitored cycles',
   'Approved for public communication',
 ];
 
@@ -23,7 +23,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
             <Chapter n={chapterNumber ?? '03'} label="Production Proof" />
             <div className="mt-10 grid gap-y-7 border-y border-line py-8 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                '50,000+ cycles',
+                '1,25,000+ cycles',
                 'Production deployment',
                 'Global Automotive OEM',
                 'Edge AI + PLC',
@@ -57,7 +57,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
 
           <div className="mt-16 border-t border-line pt-12">
             <p className="font-display text-7xl font-black leading-none text-ink sm:text-8xl lg:text-[7.5rem]">
-              50,000<span className="text-accent">+</span>
+              1,25,000<span className="text-accent">+</span>
             </p>
             <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.34em] text-steel-500">
               Production cycles monitored

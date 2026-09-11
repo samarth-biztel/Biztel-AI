@@ -13,12 +13,13 @@ export function Reveal({ children, className = '', delay = 0, y = 20, id }: Reve
 
   return (
     <motion.div
-      className={className}
+      className={`motion-reveal ${className}`}
       id={id}
       initial={reduced ? false : { opacity: 0, y }}
+      animate={reduced ? { opacity: 1, y: 0 } : undefined}
       whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.68, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: reduced ? 0 : 0.68, delay: reduced ? 0 : delay, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>
