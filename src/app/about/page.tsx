@@ -3,6 +3,7 @@
 import { ArrowRight } from 'lucide-react';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import { StartupMembership } from '@/components/StartupMembership';
 import { ProductionProof } from '@/components/home/ProductionProof';
 import { Reveal, Chapter } from '@/components/ui/Reveal';
 import { useSiteNavigation } from '@/hooks/useSiteNavigation';
@@ -37,6 +38,7 @@ export default function AboutPage() {
                   <div className="mt-2 text-sm text-steel-300">Operational intelligence across manufacturing functions</div>
                 </div>
               </div>
+              <StartupMembership />
               <button onClick={() => navigate('/contact#book-demo')} className="btn-primary mt-10">
                 Book a Demo <ArrowRight className="h-4 w-4" />
               </button>

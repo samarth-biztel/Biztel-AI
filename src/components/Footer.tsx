@@ -1,4 +1,5 @@
 import { Logo } from './Logo';
+import { StartupMembership } from './StartupMembership';
 
 interface FooterProps {
   onNavigate: (path: string) => void;
@@ -43,6 +44,7 @@ export function Footer({ onNavigate }: FooterProps) {
           <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.32em] text-steel-600">
             AI-Powered Manufacturing Intelligence
           </p>
+          <StartupMembership />
         </div>
 
         {columns.map((column) => (
