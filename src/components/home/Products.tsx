@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, FileText, MessagesSquare, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Reveal, Chapter } from '@/components/ui/Reveal';
 
 export function Products() {
@@ -34,18 +34,15 @@ export function Products() {
 
           <Reveal className="min-w-0" delay={0.1}>
             <Link href="/ai-teammates" aria-label="Explore AI Teammates" className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-accent">
-              <div role="img" aria-label="AI Teammates concept illustration: manufacturing documents and conversations connected with AI assistance." className="relative flex aspect-video items-center justify-center overflow-hidden border border-line bg-muted">
-                <div className="absolute inset-0 grid-bg opacity-50" />
-                <div aria-hidden="true" className="relative flex items-center justify-center px-6 text-accent">
-                  <FileText className="h-10 w-10 shrink-0 sm:h-12 sm:w-12" strokeWidth={1.2} />
-                  <span className="mx-3 h-px w-6 bg-accent/40 sm:mx-5 sm:w-10" />
-                  <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border border-accent/30 bg-surface sm:h-28 sm:w-28">
-                    <Sparkles className="h-9 w-9 sm:h-12 sm:w-12" strokeWidth={1.2} />
-                  </div>
-                  <span className="mx-3 h-px w-6 bg-accent/40 sm:mx-5 sm:w-10" />
-                  <MessagesSquare className="h-10 w-10 shrink-0 sm:h-12 sm:w-12" strokeWidth={1.2} />
-                </div>
-                <span className="absolute bottom-4 font-mono text-[10px] uppercase tracking-[0.2em] text-steel-500">Product concept</span>
+              <div className="relative aspect-video overflow-hidden border border-line bg-muted">
+                <Image
+                  src="/ai-teammates-concept.png"
+                  alt="AI Teammates concept: a manufacturing engineer and a virtual AI colleague reviewing a machined component and engineering drawings."
+                  fill
+                  sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 92vw"
+                  className="object-cover"
+                />
+                <span className="absolute bottom-3 left-3 bg-surface/95 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-ink">Product concept</span>
               </div>
               <span className="tag tag-future mt-7">In Development</span>
               <h3 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">AI Teammates</h3>
