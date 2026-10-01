@@ -1,14 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Reveal, Chapter } from '@/components/ui/Reveal';
+import { Reveal } from '@/components/ui/Reveal';
 
 export function Products() {
   return (
     <section id="products" aria-labelledby="products-heading" className="border-b border-line bg-surface text-ink">
       <div className="container-x py-24 lg:py-28">
         <Reveal>
-          <Chapter n="01" label="Products" />
-          <h2 id="products-heading" className="mt-8 font-display text-4xl font-extrabold leading-tight sm:text-5xl">
+          <h2 id="products-heading" className="font-display text-4xl font-extrabold leading-tight sm:text-5xl">
             Explore our products
           </h2>
         </Reveal>
