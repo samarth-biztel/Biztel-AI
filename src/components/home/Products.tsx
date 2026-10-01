@@ -29,9 +29,6 @@ export function Products() {
               <span className="tag tag-current mt-7">Current / Live Product</span>
               <h3 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">AI Supervisor</h3>
               <p className="mt-4 text-lg leading-8 text-steel-300">Real-time intelligence for production execution.</p>
-              <span className="mt-6 inline-flex min-h-11 items-center gap-2 font-semibold text-accent group-hover:underline">
-                Explore <ArrowRight aria-hidden="true" className="h-4 w-4" />
-              </span>
             </Link>
           </Reveal>
 
