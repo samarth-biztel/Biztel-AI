@@ -44,7 +44,7 @@ export function Products() {
               </div>
               <span className="tag tag-future mt-7">In Development</span>
               <h3 className="mt-4 font-display text-3xl font-extrabold sm:text-4xl">AI Teammates</h3>
-              <p className="mt-4 text-lg leading-8 text-steel-300">AI-powered assistance for manufacturing engineering.</p>
+              <p className="mt-4 text-lg leading-8 text-steel-300">Copilot agents for factory engineers</p>
             </Link>
           </Reveal>
         </div>
