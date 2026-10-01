@@ -4,7 +4,6 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/home/Hero';
 import { Products } from '@/components/home/Products';
-import { BookDemo } from '@/components/home/BookDemo';
 import { useSiteNavigation } from '@/hooks/useSiteNavigation';
 
 export default function HomePage() {
@@ -15,7 +14,6 @@ export default function HomePage() {
       <main>
         <Hero onNavigate={navigate} />
         <Products />
-        <BookDemo compact chapterNumber="02" onNavigate={navigate} />
       </main>
       <Footer onNavigate={navigate} />
     </div>
