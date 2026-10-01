@@ -16,11 +16,11 @@ export function Hero({ onNavigate }: { onNavigate: (path: string) => void }) {
           className="motion-reveal w-full"
         >
           <h1 className="heading-1 max-w-[1040px] text-ink">
-            AI-Powered Manufacturing Intelligence
+            The intelligence layer for factory execution.
           </h1>
 
           <p className="mt-9 max-w-[700px] text-lg leading-8 text-steel-300 md:text-xl">
-            BiztelAI turns process, visual and operational context into actionable intelligence for the people running the factory.
+            BiztelAI turns video, machine signals, documents and operational knowledge into usable context for manufacturing teams.
           </p>
           <div className="mt-11 flex flex-wrap gap-4">
             <button onClick={() => onNavigate('/contact#book-demo')} className="btn-primary">
