@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { Reveal, Chapter } from '@/components/ui/Reveal';
 
 const proofStats = [
-  '1,25,000+ cycles',
+  '1.5 lakh+ cycles monitored',
   'Production deployment',
   'Global Automotive OEM',
   'Edge AI + PLC',
