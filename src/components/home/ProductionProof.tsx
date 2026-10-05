@@ -1,18 +1,6 @@
 import { Reveal, Chapter } from '@/components/ui/Reveal';
 
-const proofPoints = [
-  'Live production deployment',
-  'Global automotive OEM environment',
-  '1.5 lakh+ cycles monitored',
-  'Approved for public communication',
-];
-
-const detailPoints = [
-  'Industrial station conditions',
-  'Edge inference context',
-  'Line-side operational use',
-  'No confidential footage shown',
-];
+const detailPoints = ['Global automotive OEM', 'Edge AI + PLC'];
 
 export function ProductionProof({ detailed = false, chapterNumber }: { detailed?: boolean; chapterNumber?: string }) {
   if (!detailed) {
@@ -51,10 +39,6 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
             Already running
             <span className="block">in production.</span>
           </h2>
-          <p className="mt-10 max-w-[520px] text-xl leading-8 text-steel-300">
-            AI Supervisor has been used in an automotive manufacturing environment. The monitored cycle count and deployment details have been approved for public sharing.
-          </p>
-
           <div className="mt-16 border-t border-line pt-12">
             <p className="font-display text-7xl font-black leading-none text-ink sm:text-8xl lg:text-[7.5rem]">
               1.5 lakh<span className="text-accent">+</span>
@@ -77,7 +61,7 @@ export function ProductionProof({ detailed = false, chapterNumber }: { detailed?
               </div>
             ))}
           </div>
-          <p className="mt-8 max-w-[620px] text-sm leading-7 text-steel-600">
+          <p className="mt-8 max-w-[620px] text-xs leading-6 text-steel-500">
             These details are shared with approval for public communication. No confidential production footage or customer information is shown.
           </p>
         </Reveal>
